@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <link href="/output.css" rel="stylesheet" />
       </Head>
-      <body className="antialiased bg-gray-100 dark:bg-black transition-colors overflow-x-hidden">
+      <body className="antialiased bg-gray-100 dark:bg-black transition-colors duration-[2s] overflow-x-hidden">
         <Main />
         <NextScript />
       </body>

@@ -66,7 +66,7 @@ export default function Hero() {
           className="hidden md:block h-60 lg:h-auto xl:h-[25rem] absolute -right-[5%] bottom-11 lg:right-16 xl:-right-10 lg:top-52 xl:top-1/2"
         />
       </div>
-      <div className="absolute h-[80%] sm:h-[90%] md:h-[50rem] lg:h-[60rem] xl:h-[60rem] w-[140vw] sm:w-[120vw] md:w-[120vw] xl:w-[110vw] rounded-[100%] left-1/2 -translate-x-1/2 bg-[radial-gradient(closest-side,#000_82%,#9560EB)] top-[calc(100%-140px)] md:top-[calc(100%-120px)] lg:top-[calc(100%-130px)] xl:top-[calc(100%-150px)]  border-t-2 border-purple-500" />
+      <div className="absolute h-[80%] sm:h-[90%] md:h-[50rem] lg:h-[60rem] xl:h-[60rem] w-[140vw] sm:w-[120vw] md:w-[120vw] xl:w-[110vw] rounded-[100%] left-1/2 -translate-x-1/2 bg-[radial-gradient(closest-side,#000_82%,#9560EB)] top-[calc(100%-140px)] md:top-[calc(100%-120px)] lg:top-[calc(100%-130px)] xl:top-[calc(100%-150px)] border-t-2 border-purple-500" />
     </section>
   );
 }

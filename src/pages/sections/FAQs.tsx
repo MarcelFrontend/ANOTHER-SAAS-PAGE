@@ -54,7 +54,10 @@ function FAQItem({ answer, question }: { answer: string; question: string }) {
 
 export default function FAQs() {
   return (
-    <section id="faqs" className="w-screen bg-gradient-to-b from-[#5a2aa5] to-gray-100 dark:to-black py-20 transition-colors ">
+    <section
+      id="faqs"
+      className="w-screen bg-gradient-to-b from-[#5a2aa5] to-gray-100 dark:to-black py-20 transition-colors duaration-[2]"
+    >
       <div className="container flex items-center flex-col gap-5">
         <SectionHeader main="Frequently asked questions" mainClasses="pb-5" />
         <ul className="w-full md:w-[40rem] lg:min-w-[60rem] flex justify-center flex-col gap-1 text-black dark:text-white transition-colors">

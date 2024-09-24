@@ -1,6 +1,6 @@
 "use client";
 import Head from "next/head";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import LogoTicker from "./sections/LogoTicker";
@@ -16,26 +16,6 @@ import { useTheme } from "next-themes";
 const Home = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
-
-  const [windowWidth, setWindowWidth] = useState(0);
-
-  useEffect(() => {
-    // Funkcja do ustawienia szerokości
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    // Ustawienie początkowej wartości
-    handleResize();
-
-    // Nasłuchiwanie na zmianę rozmiaru okna
-    window.addEventListener("resize", handleResize);
-
-    // Usunięcie nasłuchiwania po demontażu komponentu
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <>
@@ -55,7 +35,6 @@ const Home = () => {
         <Footer />
       </div>
 
-      {/* Przycisk zmiany motywu */}
       <button
         onClick={() =>
           theme === "dark" ? setTheme("light") : setTheme("dark")
@@ -69,8 +48,6 @@ const Home = () => {
           <Moon className="h-7 md:h-9 lg:h-12 w-auto " />
         )}
       </button>
-
-      <span className="sticky bottom-3 left-3">{windowWidth + "px"}</span>
     </>
   );
 };

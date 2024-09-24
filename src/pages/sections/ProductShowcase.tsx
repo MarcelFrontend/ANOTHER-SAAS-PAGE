@@ -5,7 +5,8 @@ export default function ProductShowcase() {
   return (
     <section
       id="product"
-      className="bg-gradient-to-b from-gray-100 dark:from-black to-[#5a2aa5] dark:to-[#5a2aa5] mt-24"
+      className="bg-gradient-to-b from-gray-100 dark:from-black to-[#5a2aa5] dark:to-[#5a2aa5] mt-24
+       transition-colors duration-[2s]"
     >
       <div className="relative container flex items-center justify-center flex-col gap-10 md:py-10 lg:pb-36">
         <SectionHeader

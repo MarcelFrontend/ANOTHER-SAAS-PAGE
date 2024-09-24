@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 export default function Header() {
   const linkStyles =
-    "dark:hover:text-white hover:text-white active:scale-95 transition-colors duration-200 text-xs md:text-md lg:text-2xl xl:text-3xl";
+    "dark:hover:text-white hover:text-white active:scale-95 transition-colors duration-200 text-2xl md:text-xs md:text-md lg:text-2xl xl:text-3xl";
 
   const [showMenu, toggleShowMenu] = useCycle(true, false);
 
@@ -56,8 +56,8 @@ export default function Header() {
         </span>
       </div>
       <header
-        className="sticky -top-px flex items-center justify-between md:px-10 py-1.5 lg:py-2.5 
-      z-20 bg-purple-950 dark:bg-black/95 dark:md:bg-black/75 backdrop-blur-sm transition-colors"
+        className="sticky -top-px flex items-center justify-between px-5 md:px-10 py-1.5 lg:py-2.5 
+      z-20 bg-purple-950 dark:bg-black/95 dark:md:bg-black/75 backdrop-blur-sm transition-colors duration-[2s]"
       >
         <div className="relative z-20">
           <div className="absolute inset-0 top-[2px] bg-[linear-gradient(to_right,#f87bff,#fb92cf,#ffdd98,#c2f0b1,#2fd8fe)] blur-sm rounded-md -m-px -z-10" />
@@ -74,8 +74,7 @@ export default function Header() {
           initial="closed"
           animate={showMenu ? "open" : "closed"}
           variants={navVariants}
-          // TODO usunąć md:left-10 
-          className="md:flex flex-col md:flex-row max-[768px]:absolute top-[42.5px] md:relative md:left-10 md:top-auto w-full md:w-auto items-center gap-4 dark:bg-black/85 dark:md:bg-transparent bg-gray-950/90 md:bg-transparent py-4 md:p-0 dark:text-gray-400 text-gray-300 -z-10 -mt-px"
+          className="md:flex flex-col md:flex-row max-[768px]:absolute top-[42.5px] left-0 md:relative md:top-auto w-full md:w-auto items-center gap-4 dark:bg-black/85 dark:md:bg-transparent bg-gray-950/90 md:bg-transparent py-4 md:p-0 dark:text-gray-400 text-gray-300 -z-10 -mt-px"
         >
           <a className={linkStyles} href="#features">
             Features
@@ -86,8 +85,8 @@ export default function Header() {
           <a className={linkStyles} href="#faqs">
             FAQs
           </a>
+          <Button text="Get for free" style="text-xl" />
         </motion.nav>
-        <Button text="Get for free" />
 
         <Menu
           onClick={() => toggleShowMenu()}
